@@ -46,7 +46,12 @@ public class Main {
                         .enabled(true)
                         .build();
                 dao.insertUser(user3);
+
                 dao.list().stream().forEach(System.out::println);
+                dao.findByUsername("700").stream().forEach(System.out::println);
+                dao.findById(2).stream().forEach(System.out::println);
+                dao.delete(user2);
+
              }
         }
 
